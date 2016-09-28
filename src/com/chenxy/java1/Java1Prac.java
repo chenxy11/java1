@@ -116,17 +116,18 @@ public class Java1Prac {
     public static void writeAndRead() throws IOException {
         Integer[] data={100,101,102,103,104,105};//defghi
         DataOutputStream dataOutputStream=new DataOutputStream(new FileOutputStream(new File("G:/hello.txt")));
+        OutputStreamWriter outputStreamWriter=new OutputStreamWriter(dataOutputStream,"UTF-8");
         for(int i=0;i<data.length;i++){
             System.out.println(data[i]);
-            dataOutputStream.writeInt(data[i]);
+            outputStreamWriter.write(data[i]);
         }
         dataOutputStream.flush();
         dataOutputStream.close();
-        DataInputStream dataInputStream=new DataInputStream(new FileInputStream(new File("G:/hello.txt")));
-        for(int j=data.length-1;j>=0;j--){
-           System.out.print(dataInputStream.readUTF());
-        }
-        dataInputStream.close();
+//        DataInputStream dataInputStream=new DataInputStream(new FileInputStream(new File("G:/hello.txt")));
+//        for(int j=data.length-1;j>=0;j--){
+//           System.out.print(dataInputStream.readUTF());
+//        }
+//        dataInputStream.close();
     }
 
     /**
