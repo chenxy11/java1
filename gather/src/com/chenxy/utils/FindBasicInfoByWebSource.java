@@ -25,6 +25,7 @@ public class FindBasicInfoByWebSource {
 
     public static final String COMMENT_COUNT_REGEX="<span id=\"commentCount1\">(.*?)</span>";
 
+    //todo 匹配新闻链接的正则表达式。需要改进
     public static final String NEWS_URL_REGEX= "<a target=\"_blank\" href=\"(.*?)\">(.*?)</a>";
 
 

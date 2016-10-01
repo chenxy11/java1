@@ -7,7 +7,7 @@ package com.chenxy.utils;
  * @since 1.0
  */
 public class SinaEconomyAllColumn {
-
+    //todo  数据库表的创建
     public static final String ECONOMY_STOCK = "http://finance.sina.com.cn/stock/";
 
     public static final String ECONOMY_NEWS_STOCK = "http://finance.sina.com.cn/stock/newstock/";
