@@ -34,4 +34,36 @@ public class Java1Prac7 {
 //          properties.list();
      }
 
+    /**
+     * java 泛型 提供了编译时类型安全监测机制
+     * 即 所操作的数据类型被指定为一个参数
+     */
+    /**
+     * 泛型的方法
+     * 1 在修饰符后面声明 <E>
+     * 2 所操作的数据类型为E
+     * @param inputArry
+     * @param <E>
+     */
+    public <E> void test2(E[] inputArry){
+        for (E element:inputArry){
+            System.out.println(element);
+        }
+    }
+
+    /**
+     * 有界的类型参数：指定某一类的数据类型
+     * @param x
+     * @param y
+     * @param z
+     * @param <E>
+     * @return
+     */
+    public static <E extends Comparable> E maxxinum(E x,E y,E z){
+
+        return null;
+    }
+
+
+
 }
