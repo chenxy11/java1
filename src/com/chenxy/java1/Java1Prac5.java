@@ -39,6 +39,36 @@ public class Java1Prac5 {
       }
 
     /**
+     * Vector实现了一个动态的数组 和ArrayList相似
+     * 但又不同
+     * Vector 是同步访问的
+     * Vector 包含了许多传统的方法 这些方法是不属于集合框架的
+     * 提供了4中构造方法
+     * 1 new Vector();创建一个默认的向量 默认大小为10
+     * 2 new Vector(int size);构建指定大小的向量
+     * 3 new Vector(int size,int incr);构建制定大小为size,每次增加的个数为incr
+     * 4 new Vector(Collection c); 构建一个包含集合元素c 的向量。
+     */
+    public void  test3(){
+        java.util.Vector vector;
+        vector = new java.util.Vector(3,2);
+        //返回当前向量存放元素的个数
+        System.out.println("initial size:"+vector.size());
+        //返回当前向量的容量
+        System.out.println("initial capacity:"+vector.capacity());
+        vector.addElement(new Integer(1));
+        vector.addElement(new Integer(2));
+        vector.addElement(new Integer(3));
+        vector.addElement(new Integer(4));
+        System.out.println("capacity four three additions :"+vector.capacity());
+        vector.firstElement();//返回当前向量的第一个元素
+        vector.lastElement();//返回当前向量的最后一个元素
+        vector.elements();//返回当前向量的枚举
+
+
+
+    }
+    /**
      * BitSet 创建一个特殊的数组来保存位值
      */
      public void test2(){

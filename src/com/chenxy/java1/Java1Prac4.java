@@ -26,7 +26,7 @@ public class Java1Prac4 {
     }
     /**
      * javaNIo 关键的三个名词
-     * 1 Channel 通道 是双向的既可以读取文件 也可以写入数据 而inputStream和outputStream 是单向的
+     * 1 Channel 通道 是双向的既可以1读取文件 也可以写入数据 而inputStream和outputStream 是单向的
      * 2 buffer 使用javaNIO 进行读取数据和写入数据必须把数据放入Buffer中
      * 3 Selector 用来轮询每个注册的Channel ，一旦发现有注册的Selector ,获取事件进行处理/
      */
