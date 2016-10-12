@@ -9,6 +9,22 @@ Caused by: java.net.ConnectException: Connection refused: connect
 6：\tomcat6\webapps\host-manager does not exist or is not a readable directory
    解决办法：conf>localhost>删除掉*.xml文件
 
+7: C:\Users\admin>javac C:\Users\admin\Desktop\OracleUtils.java
+  C:\Users\admin\Desktop\OracleUtils.java:22: 错误: c
+  // todo 鏁版嵁搴撴搷浣滃畬鍠?
+   1 个错误
+   C:\Users\admin>------->记事本另存为：编码改为 ansi
+8:Exception in thread "main" java.lang.NoClassDefFoundError: OracleUtils (wrong name: com/chenxy/utils/common/OracleUtils)
+          at java.lang.ClassLoader.defineClass1(Native Method)
+          at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+          at
+          ----->将包名删掉
+9;: 在类 OracleUtils 中找不到主方法, 请将主方法定义为:
+     public static void main(String[] args) ---->一个可以直接运行的类 必须具有入口
+
+10：C:\Users\admin>java -classpath  C:\Users\admin\Desktop OracleUtils
+     错误: 在类 OracleUtils 中找不到主方法, 请将主方法定义为:
+      public static void main(String[] args)
 
 
 
