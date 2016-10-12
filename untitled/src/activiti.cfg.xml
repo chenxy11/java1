@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--activiti 默认的引擎配置管理器名称-->
+   <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+        <!--利用Spring注入配置参数-->
+        <property name="databaseType" value="Oracle"/><!--数据库类型-->
+        <property name="databaseSchemaUpdate" value="true"/><!--当activiti 的表不存在时自动创建-->
+       <!--是否启用作业执行功能，默认为false，如果设为True 引擎会不断的刷新数据库的作业表，检查是否存在要执行的作业
+       又则触发作业的执行，作业的来源又多种，如时间事件，异步任务执行-->
+       <property name="jobExecutorActivate" value="false"/>
+       <property name="history" value="full"/><!--用来设置记录历史的级别-->
+   </bean>
+
+
+</beans>

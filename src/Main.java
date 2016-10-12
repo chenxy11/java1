@@ -6,10 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        try {
-            Java1Prac.writeAndRead();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Java1Prac.testParse();
     }
 }

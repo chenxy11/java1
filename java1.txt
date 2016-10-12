@@ -2,3 +2,5 @@ cmd 启动采集
 cmd 控制tomcat
 定时任务采集
 七大网站
+
+http://blog.csdn.net/zhang_xinxiu/article/details/38655311   ---工作流

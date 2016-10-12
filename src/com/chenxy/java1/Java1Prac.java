@@ -1,11 +1,15 @@
 package com.chenxy.java1;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 
 /**
  * Created by chenxy on 2016/9/26.
@@ -181,5 +185,20 @@ public class Java1Prac {
             return null;
     }
 
+    public static void testSdf(){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:00:00");
+        System.out.println(sdf.format(new Date()));
+    }
+    public static void testParse(){
 
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH");
+        String s="2015-09-21 10:10:12";
+
+        try {
+            System.out.println(sdf.parse(s));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        System.out.println(sdf.format(new Date()));
+    }
 }

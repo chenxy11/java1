@@ -1,0 +1,8 @@
+<component name="libraryTable">
+  <library name="com.sun.mail:javax.mail:1.4.4" type="repository">
+    <properties maven-id="com.sun.mail:javax.mail:1.4.4" />
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
