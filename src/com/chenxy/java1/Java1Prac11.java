@@ -1,5 +1,8 @@
 package com.chenxy.java1;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @version 1.0
  * @author admin
@@ -25,9 +28,11 @@ public class Java1Prac11 implements Comparable
      * @param args
      */
     public static void main(String[] args){
-        String str="Hello World";
-        String str1="hello world";
-        System.out.println(str.compareTo(str1));
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(sdf.format(new Date()).compareTo("2016-10-18 01:00:00"));
+//        String str="Hello World";
+//        String str1="hello world";
+//        System.out.println(str.compareTo(str1));
     }
 
     @Override

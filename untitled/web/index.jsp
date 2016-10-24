@@ -11,6 +11,6 @@
     <title></title>
   </head>
   <body>
-        <H1>ACTIVITI</H1>
+        <a href="/dengji?method=before">未打卡人员登记</a>
   </body>
 </html>
