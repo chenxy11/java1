@@ -1,0 +1,32 @@
+ 1 No mapping found for HTTP
+   request with URI
+   [/common/bootstrap/css/bootstrap.min.css]
+   in DispatcherServlet with name 'springServlet'
+   解决办法：
+   分析原因：<servlet-mapping>的<url-pattern>/</url-pattern>
+   把所有的请求都交给spring去处理了，而所有available的请求url
+   都是在Constroller里使用类似
+   @RequestMapping(value = "/login/{user}", method = RequestMethod.GET)
+   这样的注解配置的，这样的话对js/css/jpg/gif等静态资源的访问就会得不到。
+   A:<mvc:default-servlet-handler/>
+   B:<servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.css</url-pattern>
+     </servlet-mapping>
+     <servlet-mapping>
+         <servlet-name>default</servlet-name>
+         <url-pattern>*.gif</url-pattern>
+
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.jpg</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+          <servlet-name>default</servlet-name>
+          <url-pattern>*.js</url-pattern>
+      </servlet-mapping>
+
+2:无法找到元素 'mvc:annotation-driven' 的声明
+  解决办法：虽然在xml文件上方声明了mvc，但没有配置此声明对应的文件信息。
+  添加一行：http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
